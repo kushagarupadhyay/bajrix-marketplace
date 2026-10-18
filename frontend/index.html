@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f4" />
+  <title>BajriX — Building Materials Marketplace</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="BajriX home"><span class="brand-mark">B</span><span>Bajri<span class="brand-x">X</span><small>BUILD BETTER. TOGETHER.</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-item active" data-view="market"><span>▦</span> Marketplace</button>
+      <button class="nav-item" data-view="seller"><span>▤</span> Seller dashboard</button>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">✦</span><strong>Building something?</strong><p>Find reliable materials from verified local sellers.</p><button id="browseHelp">Explore products <span>↗</span></button></div>
+        <div class="profile"><div class="avatar">KU</div><div><strong>Kushagar</strong><small>Demo workspace</small></div><span class="dots">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">B</span> Bajri<span class="brand-x">X</span></div>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumbCurrent">Marketplace</strong></div>
+        <div class="top-actions"><span class="status-dot"></span><span class="online-text">Demo data</span><button class="icon-btn" title="Notifications">♧<i></i></button><div class="avatar small">KU</div></div>
+      </header>
+
+      <section id="marketView" class="view">
+        <div class="welcome-row"><div><div class="eyebrow"><span class="spark">✦</span> THE SMARTER WAY TO BUILD</div><h1>Build with confidence.</h1><p class="muted intro">Compare prices. Find trusted sellers. Keep your project moving.</p></div><div class="date-chip"><span>◷</span> Your materials hub</div></div>
+        <section class="hero">
+          <div class="hero-copy"><span class="hero-tag">BAJRIX MARKETPLACE</span><h2>Every material.<br/>One better choice.</h2><p>Discover quality construction essentials from local sellers — all in one place.</p><button class="hero-btn" id="heroBrowse">Explore marketplace <span>↗</span></button><div class="hero-stats"><div><strong id="statProducts">8</strong><small>Products</small></div><div><strong id="statSellers">4</strong><small>Local sellers</small></div><div><strong>100%</strong><small>Price clarity</small></div></div></div>
+          <div class="hero-art" aria-label="Illustration of construction materials"><div class="sun"></div><div class="art-circle circle-one"></div><div class="art-circle circle-two"></div><div class="bag bag-back"><span>BUILD<br/>STRONG</span></div><div class="bag bag-front"><span>BAJRIX<br/><b>CEMENT</b></span><i>50 kg</i></div><div class="brick brick-one"></div><div class="brick brick-two"></div><div class="plant"><i></i><i></i><i></i><b></b></div><div class="art-caption">QUALITY MATERIALS <span>✦</span></div></div>
+        </section>
+
+        <section class="quick-stats">
+          <div class="quick-stat"><div class="quick-icon orange">▦</div><div><small>Available products</small><strong id="availableCount">8 products</strong></div><span class="stat-arrow">↗</span></div>
+          <div class="quick-stat"><div class="quick-icon green">✓</div><div><small>Verified sellers</small><strong>Trusted local partners</strong></div><span class="mini-pill">Approved</span></div>
+          <div class="quick-stat"><div class="quick-icon purple">₹</div><div><small>Compare before you buy</small><strong>Transparent pricing</strong></div><span class="stat-arrow">↗</span></div>
+        </section>
+
+        <section class="catalog-section" id="catalog">
+          <div class="section-heading"><div><div class="eyebrow">FIND WHAT YOU NEED</div><h2>Explore materials <span class="count-badge" id="resultCount">8</span></h2><p class="muted">Compare seller offers and choose what works for your project.</p></div><button class="text-btn" id="clearFilters">Reset filters ↺</button></div>
+          <div class="filter-panel">
+            <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search cement, bricks, steel..." autocomplete="off"/><kbd>⌘ K</kbd></label>
+            <div class="filter-controls"><label class="select-wrap"><span>Category</span><select id="categoryFilter"><option value="all">All categories</option><option>Cement</option><option>Steel</option><option>Bricks & Blocks</option><option>Sand & Aggregate</option><option>Plumbing</option><option>Electrical</option><option>Paint</option></select></label><label class="select-wrap"><span>Sort by</span><select id="sortFilter"><option value="popular">Recommended</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name: A to Z</option></select></label></div>
+          </div>
+          <div class="category-chips" id="categoryChips"><button class="chip selected" data-category="all">All materials <span>08</span></button><button class="chip" data-category="Cement">Cement</button><button class="chip" data-category="Steel">Steel</button><button class="chip" data-category="Bricks & Blocks">Bricks & blocks</button><button class="chip" data-category="Sand & Aggregate">Sand & aggregate</button><button class="chip" data-category="Paint">Paint</button></div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No materials found</h3><p>Try another search term or clear your filters.</p><button class="primary-btn" id="emptyReset">Clear filters</button></div>
+        </section>
+        <footer class="footer"><span>© 2026 BajriX Marketplace</span><span>Made for better building <b>✦</b></span></footer>
+      </section>
+
+      <section id="sellerView" class="view hidden">
+        <div class="seller-heading"><div><div class="eyebrow">SELLER WORKSPACE</div><h1>Your listings, your business.</h1><p class="muted">Manage your prices, stock and minimum order quantities.</p></div><button class="primary-btn" id="addListingBtn">＋ Add listing</button></div>
+        <div class="seller-notice"><span>ⓘ</span><div><strong>Demo seller mode</strong><p>You're managing listings for <b>Shree Traders</b>. Changes are saved in this browser only.</p></div><label>Seller <select id="sellerSelect"><option>Shree Traders</option><option>BuildMart Supplies</option><option>Om Construction Depot</option><option>Pending Seller Co.</option></select></label></div>
+        <div class="seller-metrics"><div class="metric-card"><span>ACTIVE LISTINGS</span><strong id="sellerActive">4</strong><small>Currently visible to buyers</small></div><div class="metric-card"><span>OUT OF STOCK</span><strong id="sellerOut">0</strong><small>Need restocking</small></div><div class="metric-card"><span>AVERAGE PRICE</span><strong id="sellerAvg">₹0</strong><small>Across your listings</small></div></div>
+        <div class="listing-panel"><div class="listing-head"><div><h2>Manage listings</h2><p class="muted">Update offers for the products you sell.</p></div><label class="search-box compact"><span>⌕</span><input id="listingSearch" placeholder="Search your listings..."/></label></div><div class="table-scroll"><table><thead><tr><th>PRODUCT</th><th>PRICE / UNIT</th><th>STOCK</th><th>MIN. ORDER</th><th>STATUS</th><th></th></tr></thead><tbody id="listingTable"></tbody></table></div><div class="table-foot"><span id="listingCount">Showing 4 listings</span><span>Changes are stored locally</span></div></div>
+        <div class="footer"><span>© 2026 BajriX Marketplace</span><span>Seller tools <b>✦</b></span></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="listingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><div><div class="eyebrow">SELLER LISTING</div><h2 id="modalTitle">Add a listing</h2></div><button class="close-btn" id="closeModal" aria-label="Close">×</button></div><form id="listingForm"><input type="hidden" id="editId"/><label>Product name<input id="formName" required maxlength="80" placeholder="e.g. PPC Cement 50 kg"/></label><div class="form-row"><label>Category<select id="formCategory" required><option>Cement</option><option>Steel</option><option>Bricks & Blocks</option><option>Sand & Aggregate</option><option>Plumbing</option><option>Electrical</option><option>Paint</option></select></label><label>Unit<input id="formUnit" required placeholder="bag, kg, piece"/></label></div><div class="form-row"><label>Price (₹)<input id="formPrice" type="number" min="0.01" step="0.01" required placeholder="390"/></label><label>Stock quantity<input id="formStock" type="number" min="0" step="1" required placeholder="100"/></label></div><label>Minimum order quantity<input id="formMoq" type="number" min="1" step="1" required value="1"/></label><div class="form-error hidden" id="formError"></div><div class="modal-actions"><button type="button" class="secondary-btn" id="cancelModal">Cancel</button><button type="submit" class="primary-btn">Save listing</button></div></form></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
