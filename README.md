@@ -58,7 +58,7 @@ Spring Web, Spring Data JPA, Jakarta Validation
 MySQL 8+
 Run locally
 Install JDK 21, Maven (or use IntelliJ's bundled Maven), and MySQL.
-Create a database: CREATE DATABASE bajrix_marketplace;
+Create a database: CREATE DATABASE bajrix_db;
 Set database credentials in src/main/resources/application.yml or environment variables DB_URL, DB_USERNAME, DB_PASSWORD.
 Open this folder in IntelliJ IDEA and reload Maven.
 Run com.bajrix.marketplace.MarketplaceApplication.
