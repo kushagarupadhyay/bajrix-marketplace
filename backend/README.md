@@ -11,7 +11,7 @@ A Spring Boot REST API for a multi-seller construction-products marketplace. Thi
 
 ## Run locally
 1. Install JDK 21, Maven (or use IntelliJ's bundled Maven), and MySQL.
-2. Create a database: `CREATE DATABASE bajrix_marketplace;`
+2. Create a database: `CREATE DATABASE bajrix_db;`
 3. Set database credentials in `src/main/resources/application.yml` or environment variables `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`.
 4. Open this folder in IntelliJ IDEA and reload Maven.
 5. Run `com.bajrix.marketplace.MarketplaceApplication`.
